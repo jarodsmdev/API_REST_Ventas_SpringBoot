@@ -26,6 +26,9 @@ jobs:
                 echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
                 echo "DB_USERNAME=${{ secrets.DB_USERNAME }}" >> .env
                 echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
+           
+            - name: List files in the working directory
+              run: ls -alh
 
             - name: Build and push Docker image
               uses: docker/build-push-action@v6
@@ -34,7 +37,7 @@ jobs:
                 push: true
                 tags: ${{ secrets.DOCKERHUB_USERNAME }}/ventas_api:latest
                 context: .
-                file: Dockerfile
+                file: ./Springboot-API-REST/Dockerfile
         
 
             - name: Login to Docker Hub
