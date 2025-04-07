@@ -68,5 +68,5 @@ jobs:
                   # Hacer un pull de la imagen de docker hub
                   sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ventas_api:latest
                   # Ejecutar el contenedor en segundo plano
-                  sudo docker run -d -p 80:8080 ${{ secrets.DOCKERHUB_USERNAME }}/ventas_apilatest
+                  sudo docker run -d -p 80:8080 ${{ secrets.DOCKERHUB_USERNAME }}/ventas_api:latest
             
