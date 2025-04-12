@@ -59,8 +59,6 @@ jobs:
                 port: ${{ secrets.EC2_SSH_PORT }}
                 script: |
                   mkdir -p /home/ubuntu/ventas/
-                  ls -la
-                  pwd
                   cd /home/ubuntu/ventas/
                   # Instalación de Docker y Docker Compose (si no están instalados)
                   sudo apt update -y
